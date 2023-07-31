@@ -11,7 +11,7 @@ export const Item = ({ product, onAddToCart }) => {
       <div className="product-card">
         <h2>{product.title}</h2>
         <h4>${product.price}.00</h4>
-        <p>{product.description}</p>
+        <p className="description">{product.description}</p>
         <p className="required">Size</p>
         <div>
           {product.sizeOptions &&
@@ -20,6 +20,7 @@ export const Item = ({ product, onAddToCart }) => {
                 <button
                   key={sizeObject.id}
                   onClick={() => setSelectedSize(sizeObject.label)}
+                  className="sizes"
                 >
                   {sizeObject.label}
                 </button>{" "}

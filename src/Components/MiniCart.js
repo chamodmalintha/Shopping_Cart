@@ -7,7 +7,7 @@ export const MiniCart = ({ isOpen, onClose, selectedProducts }) => {
     <div>
       <div className="modal-overlay">
         <div className="modal-content">
-          <button onClick={onClose}>Close</button>
+          <button onClick={onClose}>X</button>
           <ul>
             {selectedProducts.map((item, index) => (
               <li key={index}>
